@@ -6,32 +6,25 @@ import {
   TouchableOpacity,
   FlatList,
 } from "react-native";
-
-import styles from "./livegames";
+import styles from "./populargames.style";
 import { SIZES } from "../../../constants";
-import LiveGamesCard from "../../cards/LiveGames/LiveGamesCard";
-import useFetch from "../../../hook/useFetch";
+import PopularGamesCard from "../../cards/PopularGames/PopularGamesCard";
+import { populargames } from '../../../constants'
 
-import { livegames } from '../../../constants'
-
-const LiveGames = () => {
+const PopularGames = () => {
   const router = useRouter();
-  const { data, isLoading, error } = useFetch("search", {
-    query: "Developer",
-    num_pages: "1",
-  });
 
   const [selectedJob, setSelectedJob] = useState();
 
   const handleCardPress = (item) => {
-    router.push(`/job-details/${item.job_id}`);
-    setSelectedJob(item.job_id);
+    router.push(`/populargames-details/${item.id}`);
+    setSelectedJob(item.id);
   };
 
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerTitle}>Live Games</Text>
+        <Text style={styles.headerTitle}>Popular Games</Text>
         <TouchableOpacity>
           <Text style={styles.headerBtn}>Show all</Text>
         </TouchableOpacity>
@@ -39,9 +32,9 @@ const LiveGames = () => {
 
       <View style={styles.cardsContainer}>
         <FlatList
-          data={livegames}
+          data={populargames}
           renderItem={({ item }) => (
-            <LiveGamesCard
+            <PopularGamesCard
               item={item}
               key={item.id}
               selectedJob={selectedJob}
@@ -57,4 +50,4 @@ const LiveGames = () => {
   );
 };
 
-export default LiveGames;
+export default PopularGames;

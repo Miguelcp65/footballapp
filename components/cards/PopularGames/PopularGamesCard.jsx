@@ -1,9 +1,7 @@
 import { View, Text, TouchableOpacity, Image } from "react-native";
+import styles from "./populargames.style";
 
-import styles from "./livegamescard.style";
-import { icons } from "../../../constants";
-
-const LiveGamesCard = ({ item, handleCardPress }) => {
+const PopularGamesCard = ({ item, handleCardPress }) => {
   return (
     <TouchableOpacity
       style={styles.container}
@@ -12,11 +10,6 @@ const LiveGamesCard = ({ item, handleCardPress }) => {
     >
       <View style={styles.gameInfo}>
         <Text style={styles.infoCompetition}>{item.competition}</Text>
-        <Image
-          source={icons.liveicon}
-          resizeMode="contain"
-          style={styles.liveicon}
-        />
       </View>
       <View style={styles.scoreBoardView}>
         <View style={styles.logoContainer}>
@@ -28,12 +21,7 @@ const LiveGamesCard = ({ item, handleCardPress }) => {
           <Text style={styles.teamName} numberOfLines={1}>{item.team1}</Text>
         </View>
         <View>
-          <View style={styles.minuteText}>
-            <Text style={{ marginLeft: 5, color: "#AB0404" }}>
-              {item.minute}
-            </Text>
-            <Text style={{ color: "#AB0404", }}>'</Text>
-          </View>
+
           <Text style={styles.scoreBoardText}>
             {item.scoreboard}
           </Text>
@@ -46,9 +34,9 @@ const LiveGamesCard = ({ item, handleCardPress }) => {
           />
           <Text style={styles.teamName} numberOfLines={1}>{item.team2}</Text>
         </View>
-      </View >
+      </View>
     </TouchableOpacity>
   );
 };
 
-export default LiveGamesCard;
+export default PopularGamesCard;

@@ -5,7 +5,7 @@ import { Stack, useRouter } from "expo-router";
 import { COLORS, icons, SIZES } from "../constants";
 import {
   ScreenHeaderBtn,
-  LiveGames,
+  PopularGames,
   MatchSchedule,
   FootballNews
 } from "../components";
@@ -24,23 +24,23 @@ const Home = () => {
           },
           headerShadowVisible: false,
           headerLeft: () => (
-            <ScreenHeaderBtn iconUrl={icons.menu} dimension="60%" />
+            <ScreenHeaderBtn iconUrl={icons.menu} dimension="50%" />
           ),
           headerRight: () => (
-            <ScreenHeaderBtn iconUrl={icons.notification} dimension="60%" />
+            <ScreenHeaderBtn iconUrl={icons.notification} dimension="50%" />
           ),
-          headerTitle: "LiveScore",
+          headerTitle: "FootballApp",
         }}
       />
 
-      <ScrollView showVerticalScrollIndicator={false}>
+      <ScrollView showVerticalScrollIndicator={false} >
         <View
           style={{
             flex: 1,
             padding: SIZES.medium,
           }}
         >
-          <LiveGames />
+          <PopularGames />
           <MatchSchedule />
           <FootballNews />
         </View>

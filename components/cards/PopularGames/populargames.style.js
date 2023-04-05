@@ -29,39 +29,26 @@ const styles = StyleSheet.create({
   teamName: {
     color: "#fff",
     fontSize: 16,
-    marginTop: 8
-  },
-  liveicon: {
-    height: 13,
-    width: 13
+    marginTop: 8,
+    width: "95%",
+    textAlign: "center",
   },
   scoreBoardView: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    padding: SIZES.medium,
-    height: "100%",
+    height: "95%",
   },
   logoImage: {
     width: "55%",
     height: "55%",
   },
-  infoContainer: {
-    marginTop: SIZES.large,
-  },
   scoreBoardText: {
     color: "#fff",
     fontSize: 26,
-    textAlign: "center"
-  },
-  minuteText: {
-    flexDirection: "row",
-    justifyContent: "center",
-    marginTop: -40,
-    marginBottom: 5,
-    fontSize: 14,
-    textAlign: "center"
+    textAlign: "center",
+    marginTop: -25,
   },
 });
 

@@ -25,17 +25,13 @@ const FootballNewsCard = ({ item, handleCardPress }) => {
             <Text style={styles.topicText} numberOfLines={1}>{item.topic}</Text>
           </View>
         </View>
-
-
         <View style={styles.bookmark}>
-        <Image
-          source={icons.saved}
-          resizeMode="contain"
-          style={styles.bookmarkImage}
-        />
+          <Image
+            source={icons.saved}
+            resizeMode="contain"
+            style={styles.bookmarkImage}
+          />
         </View>
-
-
       </View>
     </TouchableOpacity>
   );

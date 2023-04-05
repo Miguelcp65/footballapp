@@ -4,10 +4,9 @@ import {
   View,
   Text,
   TouchableOpacity,
-  FlatList,
 } from "react-native";
 
-import styles from "./matchschedule";
+import styles from "./matchschedule.style";
 import MatchScheduleCard from "../../cards/MatchSchedule/MatchScheduleCard";
 import useFetch from "../../../hook/useFetch";
 
@@ -37,17 +36,14 @@ const MatchSchedule = () => {
       </View>
 
       <View style={styles.cardsContainer}>
-        <FlatList
-          data={matchschedule}
-          renderItem={({ item }) => (
-            <MatchScheduleCard
-              item={item}
-              selectedJob={selectedJob}
-              handleCardPress={handleCardPress}
-            />
-          )}
-          keyExtractor={(item) => item.id}
-        />
+        {matchschedule.map((item) => (
+          <MatchScheduleCard
+            key={item.id}
+            item={item}
+            selectedJob={selectedJob}
+            handleCardPress={handleCardPress}
+          />
+        ))}
       </View>
     </View>
   );

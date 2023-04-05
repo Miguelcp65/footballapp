@@ -4,10 +4,9 @@ import {
   View,
   Text,
   TouchableOpacity,
-  FlatList,
 } from "react-native";
 
-import styles from "./footballnews";
+import styles from "./footballnews.style";
 import FootballNewsCard from "../../cards/FootballNews/FootballNewsCard";
 
 import { footballnews } from '../../../constants'
@@ -32,17 +31,14 @@ const FootballNews = () => {
       </View>
 
       <View style={styles.cardsContainer}>
-        <FlatList
-          data={footballnews}
-          renderItem={({ item }) => (
-            <FootballNewsCard
-              item={item}
-              selectedJob={selectedJob}
-              handleCardPress={handleCardPress}
-            />
-          )}
-          keyExtractor={(item) => item.id}
-        />
+        {footballnews.map((item) => (
+          <FootballNewsCard
+            key={item.id}
+            item={item}
+            selectedJob={selectedJob}
+            handleCardPress={handleCardPress}
+          />
+        ))}
       </View>
     </View>
   );
