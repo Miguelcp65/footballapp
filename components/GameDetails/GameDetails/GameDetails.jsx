@@ -1,7 +1,8 @@
 import {
     View,
     Text,
-    Image
+    Image,
+    TouchableOpacity
 } from "react-native";
 import styles from "./gamedetails.style";
 
@@ -10,7 +11,9 @@ const GameDetails = ({ selectedgame }) => {
     return (
         <View style={styles.container}>
             <View style={styles.header}>
-                <Text style={styles.headertext}>{selectedgame.competition}</Text>
+                <TouchableOpacity>
+                    <Text style={styles.headertext}>{selectedgame.competition}</Text>
+                </TouchableOpacity>
                 <Text style={styles.headertext}>{selectedgame.stadium}</Text>
             </View>
             <View style={styles.matchcontainer}>
@@ -21,10 +24,14 @@ const GameDetails = ({ selectedgame }) => {
                             resizeMode="contain"
                             style={styles.logoImage}
                         />
-                        <Text style={styles.teamName} numberOfLines={1}>{selectedgame.team1}</Text>
+                        <TouchableOpacity>
+                            <Text style={styles.teamName} numberOfLines={1}>{selectedgame.team1}</Text>
+                        </TouchableOpacity>
                         <View style={styles.goals}>
                             {selectedgame.team1goals.map((goal) => (
-                                <Text style={{ fontSize: 16, color: "grey", marginBottom: 5 }} key={goal} numberOfLines={1}>{goal}</Text>
+                                <TouchableOpacity>
+                                    <Text style={{ fontSize: 16, color: "grey", marginBottom: 5 }} key={goal} numberOfLines={1}>{goal}</Text>
+                                </TouchableOpacity>
 
                             ))}
                         </View>
@@ -41,17 +48,21 @@ const GameDetails = ({ selectedgame }) => {
                             resizeMode="contain"
                             style={styles.logoImage}
                         />
-                        <Text style={styles.teamName} numberOfLines={1}>{selectedgame.team2}</Text>
+                        <TouchableOpacity>
+                            <Text style={styles.teamName} numberOfLines={1}>{selectedgame.team2}</Text>
+                        </TouchableOpacity>
                         <View style={styles.goals}>
                             {selectedgame.team2goals.map((goal) => (
-                                <Text style={{ fontSize: 16, color: "grey", marginBottom: 5, textAlign: "right" }} key={goal} numberOfLines={1}>{goal}</Text>
+                                <TouchableOpacity>
+                                    <Text style={{ fontSize: 16, color: "grey", marginBottom: 5, textAlign: "right" }} key={goal} numberOfLines={1}>{goal}</Text>
+                                </TouchableOpacity>
 
                             ))}
                         </View>
                     </View>
                 </View >
             </View>
-        </View>
+        </View >
     );
 };
 

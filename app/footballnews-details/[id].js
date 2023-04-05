@@ -10,29 +10,23 @@ import { Stack, useRouter, useSearchParams } from "expo-router";
 import { useCallback, useState } from "react";
 import {
   ScreenHeaderBtn,
-  GameDetails,
-  GameDetailsStats
+  FootballNewsDetails,
 } from "../../components";
-import { COLORS, icons, populargames, livegamestatus } from "../../constants";
+import { COLORS, icons, footballnews } from "../../constants";
 
-const GameDetailsPage = () => {
+const NewsDetailsPage = () => {
   const params = useSearchParams();
   const router = useRouter();
 
-  const selectedgamefunction = () => {
-    selectedgame = populargames.find((game) => game.id == params.id)
+  const selectedfootballnewsfunction = () => {
+    selectedfootballnews = footballnews.find((news) => news.id == params.id)
   };
-  const selectedgamedetailsfunction = () => {
-    selectedgamedetails = livegamestatus.find((gamedetails) => gamedetails.game_id == params.id)
-  };
-  selectedgamefunction();
-  selectedgamedetailsfunction();
-
+  selectedfootballnewsfunction();
 
   const [refreshing, setRefreshing] = useState(false);
   const onRefresh = useCallback(() => {
     setRefreshing(true);
-    selectedgamefunction();
+    selectedfootballnewsfunction();
     setRefreshing(false);
   }, []);
 
@@ -58,9 +52,9 @@ const GameDetailsPage = () => {
             />
           ),
           headerRight: () => (
-            <ScreenHeaderBtn iconUrl={selectedgame.saved ? (icons.savedgame) : (icons.unsavedgame)} dimension="50%" />
+            <ScreenHeaderBtn iconUrl={selectedfootballnews.saved ? (icons.savednews) : (icons.unsavednews)} dimension="50%" />
           ),
-          headerTitle: "Match Details",
+          headerTitle: "Football News",
         }}
       />
       <>
@@ -71,11 +65,8 @@ const GameDetailsPage = () => {
           }
         >
           <View>
-            <GameDetails
-              selectedgame={selectedgame}
-            />
-            <GameDetailsStats
-              selectedgamedetails={selectedgamedetails}
+            <FootballNewsDetails
+              selectedfootballnews={selectedfootballnews}
             />
           </View>
         </ScrollView>
@@ -84,4 +75,4 @@ const GameDetailsPage = () => {
   );
 };
 
-export default GameDetailsPage;
+export default NewsDetailsPage;

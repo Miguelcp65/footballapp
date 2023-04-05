@@ -27,7 +27,7 @@ const FootballNewsCard = ({ item, handleCardPress }) => {
         </View>
         <View style={styles.bookmark}>
           <Image
-            source={icons.saved}
+            source={item.saved ? (icons.savednews) : (icons.unsavednews)}
             resizeMode="contain"
             style={styles.bookmarkImage}
           />

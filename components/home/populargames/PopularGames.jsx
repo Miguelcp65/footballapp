@@ -13,12 +13,8 @@ import { populargames } from '../../../constants'
 
 const PopularGames = () => {
   const router = useRouter();
-
-  const [selectedJob, setSelectedJob] = useState();
-
   const handleCardPress = (item) => {
     router.push(`/populargames-details/${item.id}`);
-    setSelectedJob(item.id);
   };
 
   return (
@@ -37,7 +33,6 @@ const PopularGames = () => {
             <PopularGamesCard
               item={item}
               key={item.id}
-              selectedJob={selectedJob}
               handleCardPress={handleCardPress}
             />
           )}

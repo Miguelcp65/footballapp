@@ -4,11 +4,13 @@ import MatchSchedule from './home/matchschedule/MatchSchedule'
 import FootballNews from './home/footballnews/FootballNews'
 import GameDetails from './GameDetails/GameDetails/GameDetails'
 import GameDetailsStats from './GameDetails/GameDetailsStats/GameDetailsStats'
+import FootballNewsDetails from './FootballNewsDetails/FootballNewsDetails'
 export {
   ScreenHeaderBtn,
   PopularGames,
   MatchSchedule,
   FootballNews,
   GameDetails,
-  GameDetailsStats
+  GameDetailsStats,
+  FootballNewsDetails
 };
