@@ -25,7 +25,7 @@ const FootballNewsDetails = ({ selectedfootballnews }) => {
             />
 
             {selectedfootballnews.description.map((p) => (
-                <Text style={styles.description}>{p}</Text>
+                <Text key={p} style={styles.description}>{p}</Text>
             ))}
 
         </View>
