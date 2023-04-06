@@ -6,7 +6,8 @@ import {
   ScreenHeaderBtn,
   PopularGames,
   MatchSchedule,
-  FootballNews
+  FootballNews,
+  Standings
 } from "../components";
 
 const Home = () => {
@@ -42,6 +43,7 @@ const Home = () => {
           <PopularGames />
           <MatchSchedule />
           <FootballNews />
+          <Standings />
         </View>
       </ScrollView>
     </SafeAreaView>

@@ -7,7 +7,6 @@ import {
   FlatList,
 } from "react-native";
 import styles from "./populargames.style";
-import { SIZES } from "../../../constants";
 import PopularGamesCard from "../../cards/PopularGames/PopularGamesCard";
 import { populargames } from '../../../constants'
 

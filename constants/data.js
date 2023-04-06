@@ -16,6 +16,8 @@ import atalanta from '../assets/images/atalanta.png'
 import sampdoria from '../assets/images/sampdoria.png'
 import newcastle from '../assets/images/newcastle.png'
 import chelsea from '../assets/images/chelsea.png'
+import southampton from '../assets/images/southampton.png'
+import tottenham from '../assets/images/tottenham.png'
 import news1 from '../assets/images/news1.jpg'
 import news2 from '../assets/images/news2.jpg'
 import news3 from '../assets/images/news3.jpg'
@@ -363,4 +365,57 @@ const livegamestatus = [
     },
 ]
 
-export { populargames, matchschedule, footballnews, livegamestatus }
+const standings = [
+    {
+        id: 1,
+        pos: 1,
+        wins: 10,
+        draws: 2,
+        losses: 1,
+        points: 32,
+        name: "Arsenal",
+        img: arsenal,
+    },
+    {
+        id: 2,
+        pos: 4,
+        wins: 5,
+        draws: 1,
+        losses: 7,
+        points: 16,
+        name: "Man United",
+        img: manunited,
+    },
+    {
+        id: 3,
+        pos: 3,
+        wins: 7,
+        draws: 3,
+        losses: 3,
+        points: 24,
+        name: "Tottenham",
+        img: tottenham,
+    },
+    {
+        id: 4,
+        pos: 2,
+        wins: 8,
+        draws: 3,
+        losses: 2,
+        points: 27,
+        name: "Liverpool",
+        img: liverpool,
+    },
+    {
+        id: 5,
+        pos: 1,
+        wins: 3,
+        draws: 1,
+        losses: 9,
+        points: 10,
+        name: "Southampton",
+        img: southampton,
+    },
+]
+
+export { populargames, matchschedule, footballnews, livegamestatus, standings }
