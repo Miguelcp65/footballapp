@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { FONT, SIZES, COLORS } from "../../../constants"
+import { FONT, COLORS } from "../../../constants"
 
 const styles = StyleSheet.create({
     container: {
@@ -10,8 +10,9 @@ const styles = StyleSheet.create({
     },
     matchstats: {
         fontSize: 22,
-        color: "#fff",
-        textAlign: "center",
+        color: COLORS.lightWhite,
+        fontFamily: FONT.medium,
+        fontSize: 16,
         marginTop: 10,
     },
     statscontainer: {
@@ -24,7 +25,8 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
     },
     statslinetext: {
-        color: "#fff",
+        color: COLORS.lightWhite,
+        fontFamily: FONT.medium,
         fontSize: 16,
     },
     statsprogress: {

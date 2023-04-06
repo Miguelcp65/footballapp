@@ -1,5 +1,4 @@
 import { View, Text, TouchableOpacity, Image } from "react-native";
-
 import styles from "./matchschedulecard.style";
 
 const MatchScheduleCard = ({ item, handleCardPress }) => {

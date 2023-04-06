@@ -1,9 +1,7 @@
-import { useState } from "react";
 import { useRouter } from "expo-router";
 import {
   View,
-  Text,
-  TouchableOpacity,
+  Text
 } from "react-native";
 
 import styles from "./footballnews.style";

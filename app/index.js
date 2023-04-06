@@ -1,8 +1,7 @@
-import { useState } from "react";
 import { View, ScrollView, SafeAreaView } from "react-native";
 import { Stack, useRouter } from "expo-router";
 
-import { COLORS, icons, SIZES } from "../constants";
+import { COLORS, icons } from "../constants";
 import {
   ScreenHeaderBtn,
   PopularGames,
@@ -37,7 +36,7 @@ const Home = () => {
         <View
           style={{
             flex: 1,
-            padding: SIZES.medium,
+            padding: 16,
           }}
         >
           <PopularGames />

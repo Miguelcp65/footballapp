@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { FONT, COLORS } from "../../../constants";
 
 const styles = StyleSheet.create({
     container: {
@@ -17,7 +18,8 @@ const styles = StyleSheet.create({
     },
     headertext: {
         fontSize: 16,
-        color: "#fff",
+        color: COLORS.lightWhite,
+        fontFamily: FONT.medium,
         padding: 10
     },
     goals: {
@@ -44,7 +46,8 @@ const styles = StyleSheet.create({
         width: "50%",
     },
     teamName: {
-        color: "#fff",
+        color: COLORS.lightWhite,
+        fontFamily: FONT.medium,
         fontSize: 20,
         marginTop: 8,
         width: "100%",
@@ -52,7 +55,8 @@ const styles = StyleSheet.create({
     },
 
     scoreBoardText: {
-        color: "#fff",
+        color: COLORS.lightWhite,
+        fontFamily: FONT.medium,
         fontSize: 34,
         textAlign: "center",
         marginTop: -25,

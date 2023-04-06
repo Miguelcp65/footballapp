@@ -37,7 +37,7 @@ const PopularGames = () => {
             />
           )}
           keyExtractor={(item) => item.id}
-          contentContainerStyle={{ columnGap: SIZES.medium }}
+          contentContainerStyle={{ columnGap: 16 }}
           horizontal
         />
       </View>

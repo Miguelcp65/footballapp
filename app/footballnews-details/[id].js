@@ -1,5 +1,4 @@
 import {
-  Text,
   View,
   SafeAreaView,
   ScrollView,
@@ -67,6 +66,7 @@ const NewsDetailsPage = () => {
           <View>
             <FootballNewsDetails
               selectedfootballnews={selectedfootballnews}
+              key={selectedfootballnews.id}
             />
           </View>
         </ScrollView>

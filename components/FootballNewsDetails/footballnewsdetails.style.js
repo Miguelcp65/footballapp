@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { COLORS } from "../../constants";
+import { COLORS, FONT } from "../../constants";
 
 const styles = StyleSheet.create({
     container: {
@@ -8,7 +8,8 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 24,
         fontWeight: "bold",
-        color: "#fff",
+        color: COLORS.lightWhite,
+        fontFamily: FONT.medium,
     },
     topic: {
         fontSize: 20,
@@ -34,8 +35,8 @@ const styles = StyleSheet.create({
     description: {
         marginTop: 20,
         fontSize: 20,
-        color: "#fff",
-
+        color: COLORS.lightWhite,
+        fontFamily: FONT.medium,
     }
 });
 

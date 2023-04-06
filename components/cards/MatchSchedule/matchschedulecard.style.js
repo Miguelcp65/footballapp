@@ -1,15 +1,13 @@
 import { StyleSheet } from "react-native";
-import { color } from "react-native-reanimated";
-
-import { COLORS, FONT, SHADOWS, SIZES } from "../../../constants";
+import { COLORS, FONT } from "../../../constants";
 
 const styles = StyleSheet.create({
   container: {
     width: "100%",
-    padding: SIZES.small,
+    padding: 12,
     height: 80,
     backgroundColor: COLORS.tertiary,
-    borderRadius: SIZES.medium,
+    borderRadius: 16,
     marginBottom: 10,
   },
   logoContainer: {
@@ -24,11 +22,13 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   infoCompetition: {
-    color: "#fff",
+    color: COLORS.lightWhite,
+    fontFamily: FONT.medium,
     fontSize: 15
   },
   teamName: {
-    color: "#fff",
+    color: COLORS.lightWhite,
+    fontFamily: FONT.medium,
     fontSize: 16,
     width: "20%",
     margin: 7,
@@ -46,15 +46,12 @@ const styles = StyleSheet.create({
     width: "100%",
     height: "100%",
   },
-  infoContainer: {
-    marginTop: SIZES.large,
-  },
   hour: {
     width: "20%",
     alignItems: "center",
   },
   hourText: {
-    color: "#fff",
+    color: COLORS.lightWhite,
     fontSize: 18,
   },
 });
